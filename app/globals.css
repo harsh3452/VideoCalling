@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* clerk overide css */
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+.cl-logoBox {
+  height: 40px;
+}
+.cl-dividerLine {
+  background: #252a41;
+  height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+  border: 3px solid #565761;
+}
+
+.cl-internal-wkkub3 {
+  color: white;
+}
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+@layer utilities{
+  .flex-center{
+    @apply flex justify-center items-center
+  }
+  .flex-between{
+    @apply flex justify-between items-center
+  }
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -70,8 +102,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-
 
 @layer base {
   * {
