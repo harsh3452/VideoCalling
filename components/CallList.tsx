@@ -1,4 +1,3 @@
-//@ts-nocheck
 "use client";
 import { useGetCalls } from "@/hooks/useGetCalls";
 import { CallRecording, Call } from "@stream-io/video-react-sdk";
@@ -69,7 +68,7 @@ const CallList = ({ type }: { type: "ended " | "upcoming" | "recordings" }) => {
           <MeetingCard
             key={(meeting as Call).id}
             icon={
-              type === "ended"
+              type === "ended "
                 ? "/icons/previous.svg"
                 : type === "upcoming"
                 ? "/icons/upcoming.svg"
@@ -84,7 +83,7 @@ const CallList = ({ type }: { type: "ended " | "upcoming" | "recordings" }) => {
               (meeting as Call).state?.startsAt?.toLocaleString() ||
               (meeting as CallRecording).start_time?.toLocaleString()
             }
-            isPreviousMeeting={type === "ended"}
+            isPreviousMeeting={type === "ended "}
             link={
               type === "recordings"
                 ? (meeting as CallRecording).url
